@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block tittle %} Home {% endblock tittle %}
+<style>
+    .jumbotron {
+        background-color: ;
+    }
+</style> {% block body %}
+
+<div class="container" my-4 my-sm-0>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Salary Prediction System</h1>
+        <p class="lead">This is a combo of machine learning and django.</p>
+        <hr class="my-4">
+        <p>Here you can enter your experience in order to see your estimated salary.</p>
+        <a class="btn btn-primary btn-lg" href="about" role="button">Learn more</a>
+    </div>
+    <form action="{% url 'result'%}" method="GET">
+        
+        <div class="form-group">
+
+            <label for="exampleInputPassword1">
+                <h3>Enter Your Experience(in year)</h3>
+            </label>
+            <input name="Experience" type=" text " class="form-control " id="Inp_Exp " required>
+        </div>
+
+
+        <button type="submit " class="btn btn-success " value="Submit ">Submit</button>
+        <!-- <button type="reset " class="btn btn-primary " value="Reset "> Reset</button> -->
+    </form>
+
+</div>
+{% endblock body %}
